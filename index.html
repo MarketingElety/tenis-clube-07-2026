@@ -216,7 +216,7 @@
     <div class="step" id="step2">
         <div class="level-indicator">Fase 2: O Físico</div>
         <h2>Segunda-feira pós-torneio intenso em Indaiatuba. Onde o corpo mais cobra o preço?</h2>
-        <button class="btn-option" onclick="nextStep(2, 'A')"><strong>A)</strong> No cotovelo e pulso. O fantasma do tennis elbow me assombra a cada golpe atrasado.</button>
+        <button class="btn-option" onclick="nextStep(2, 'A')"><strong>A)</strong> No cotovelo e pulso. O phantom do tennis elbow me assombra a cada golpe atrasado.</button>
         <button class="btn-option" onclick="nextStep(2, 'B')"><strong>B)</strong> Nas costas e lombar. Aquele saque forçado no segundo set travou tudo.</button>
         <button class="btn-option" onclick="nextStep(2, 'C')"><strong>C)</strong> Nos joelhos e calcanhares de tanto frear brusco nas quadras da região.</button>
         <button class="btn-option" onclick="nextStep(2, 'D')"><strong>D)</strong> No corpo todo! Mas a vontade de marcar o próximo jogo de quarta à noite continua intacta.</button>
@@ -263,7 +263,6 @@
 </div>
 
 <script>
-    // Cole a URL do seu formulário externo aqui (Typeform, Google Forms, RD Station, etc.)
     const FORMULARIO_EXTERNO_URL = "https://tally.so/r/Y5vvX5"; 
 
     let choices = [];
@@ -320,8 +319,8 @@
         profileName.innerText = perfilTitulo;
         profileDesc.innerHTML = perfilTexto;
 
-        // Configura o link de redirecionamento dinâmico. 
-        // Configura o link de redirecionamento dinâmico de forma simples
+        // CORREÇÃO: Criando a variável que estava faltando antes de gerar o link final
+        const encodedPerfil = encodeURIComponent(perfilTitulo);
         const linkFinal = FORMULARIO_EXTERNO_URL + "?perfil=" + encodedPerfil;
         
         document.getElementById('btn-claim-benefit').setAttribute('href', linkFinal);
